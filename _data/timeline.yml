@@ -1,0 +1,9 @@
+- date: 2026-03
+  title: 搭建个人主页
+  description: 使用 Jekyll 搭建了 GitHub Pages 个人主页，开启记录之旅
+  icon: "\U0001F389"
+
+- date: 2026-03
+  title: 开始记笔记
+  description: 建立了 Markdown + Obsidian 混合笔记管理系统
+  icon: "\U0001F4DD"

@@ -1,0 +1,12 @@
+- name: 个人主页
+  description: 使用 Jekyll 搭建的 GitHub Pages 个人主页，清新可爱风格
+  tags: [Jekyll, HTML, SCSS]
+  github: https://github.com/T1doo/T1doo.github.io
+  demo: https://t1doo.github.io
+  icon: "\U0001F3E0"
+
+- name: 示例项目
+  description: 这是一个示例项目卡片，可以在 _data/projects.yml 中修改
+  tags: [Python, Demo]
+  github: https://github.com/T1doo
+  icon: "\U0001F680"

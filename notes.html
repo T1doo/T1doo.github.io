@@ -1,0 +1,92 @@
+---
+layout: default
+title: 笔记
+description: 学习笔记与知识整理
+---
+
+<div class="container">
+  <div class="page-header fade-in">
+    <h1>&#x1F4D3; 笔记</h1>
+    <p>学习笔记与知识整理</p>
+  </div>
+
+  <!-- Markdown Notes (Jekyll Collection) -->
+  <section class="section fade-in">
+    <h2 class="section__title">&#x270D;&#xFE0F; Markdown 笔记</h2>
+
+    {% assign notes = site.notes | sort: 'date' | reverse %}
+
+    {% if notes.size > 0 %}
+    <!-- Tag Filter -->
+    <div class="filter-bar" id="note-filter">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      {% assign note_tags = "" | split: "" %}
+      {% for note in notes %}
+        {% for tag in note.tags %}
+          {% unless note_tags contains tag %}
+            {% assign note_tags = note_tags | push: tag %}
+          {% endunless %}
+        {% endfor %}
+      {% endfor %}
+      {% for tag in note_tags %}
+      <button class="filter-btn" data-filter="{{ tag }}">{{ tag }}</button>
+      {% endfor %}
+    </div>
+
+    <div id="note-list">
+      {% for note in notes %}
+      <div class="note-item" data-tags="{% if note.tags %}{{ note.tags | join: ',' }}{% endif %}">
+        <div class="note-item__info">
+          <div class="note-item__title">
+            <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+          </div>
+          <div class="note-item__meta">
+            {% if note.date %}{{ note.date | date: "%Y-%m-%d" }}{% endif %}
+            {% if note.category %} &middot; {{ note.category }}{% endif %}
+            {% if note.tags %}
+              &middot;
+              {% for tag in note.tags %}
+                <span class="tag" style="font-size:0.7rem;">{{ tag }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="color: #9e9e9e; text-align: center; padding: 2rem 0;">
+      还没有笔记，在 <code>_notes/</code> 目录下添加 Markdown 文件即可
+    </p>
+    {% endif %}
+  </section>
+
+  <hr class="divider">
+
+  <!-- Obsidian HTML Notes -->
+  <section class="section fade-in">
+    <h2 class="section__title">&#x1F4CE; Obsidian 导出笔记</h2>
+
+    {% if site.data.obsidian_notes.size > 0 %}
+    <div id="obsidian-note-list">
+      {% for note in site.data.obsidian_notes %}
+      <div class="note-item">
+        <div class="note-item__info">
+          <div class="note-item__title">
+            <a href="{{ '/notes-html/' | append: note.file | relative_url }}">{{ note.title }}</a>
+          </div>
+          <div class="note-item__meta">
+            {% if note.date %}{{ note.date }}{% endif %}
+            {% if note.category %} &middot; {{ note.category }}{% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="color: #9e9e9e; text-align: center; padding: 2rem 0;">
+      还没有导出的笔记，将 Obsidian 导出的 HTML 放入 <code>notes-html/</code> 并在 <code>_data/obsidian_notes.yml</code> 中添加条目
+    </p>
+    {% endif %}
+  </section>
+</div>

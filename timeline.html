@@ -1,0 +1,30 @@
+---
+layout: default
+title: 动态
+description: 我的学习与成长时间线
+---
+
+<div class="container">
+  <div class="page-header fade-in">
+    <h1>&#x1F4AC; 动态</h1>
+    <p>记录学习进展、项目里程碑和生活点滴</p>
+  </div>
+
+  <div class="timeline fade-in">
+    {% for item in site.data.timeline %}
+    <div class="timeline__item">
+      <div class="timeline__date">{{ item.date }}</div>
+      <div class="timeline__title">
+        <span class="timeline__icon">{{ item.icon }}</span>{{ item.title }}
+      </div>
+      <div class="timeline__desc">{{ item.description }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if site.data.timeline.size == 0 %}
+  <p style="color: #9e9e9e; text-align: center; padding: 3rem 0;">
+    在 <code>_data/timeline.yml</code> 中添加动态条目
+  </p>
+  {% endif %}
+</div>
