@@ -1,0 +1,88 @@
+/* ===== 动画 · 关键帧 + 花瓣 + 淡入 ===== */
+
+/* 光标闪烁 */
+@keyframes blink {
+  0%, 50%   { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 淡入 */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+}
+.fade-in.is-visible {
+  animation: fadeInUp 0.7s var(--ease) forwards;
+}
+
+/* 漂浮（头像呼吸感） */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.hero__avatar {
+  animation: floaty 4s ease-in-out infinite;
+}
+
+/* ===== 飘落花瓣/星星 ===== */
+.petal-layer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.petal {
+  position: absolute;
+  top: -40px;
+  font-size: 1.2rem;
+  opacity: 0;
+  will-change: transform, opacity;
+  user-select: none;
+}
+
+@keyframes petal-fall {
+  0%   { transform: translateY(-10vh) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.9; }
+  90%  { opacity: 0.9; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes petal-fall-left {
+  0%   { transform: translateY(-10vh) translateX(0)    rotate(0deg);    opacity: 0; }
+  10%  { opacity: 0.85; }
+  50%  { transform: translateY(50vh)  translateX(-40px) rotate(360deg); }
+  90%  { opacity: 0.85; }
+  100% { transform: translateY(110vh) translateX(30px) rotate(720deg); opacity: 0; }
+}
+
+@keyframes petal-fall-right {
+  0%   { transform: translateY(-10vh) translateX(0)    rotate(0deg);     opacity: 0; }
+  10%  { opacity: 0.85; }
+  50%  { transform: translateY(50vh)  translateX(40px)  rotate(-360deg); }
+  90%  { opacity: 0.85; }
+  100% { transform: translateY(110vh) translateX(-30px) rotate(-720deg); opacity: 0; }
+}
+
+/* 让主要内容盖在花瓣层之上 */
+.nav, main, .footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* 尊重用户的减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .petal-layer { display: none; }
+}

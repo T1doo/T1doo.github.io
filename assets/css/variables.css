@@ -1,0 +1,81 @@
+/* ===== 主题变量 · 雾紫樱粉梦幻版 ===== */
+
+:root {
+  /* 颜色 · 白天樱花林 */
+  --color-primary:     #B8A6D9;
+  --color-primary-bg:  #EDE4F7;
+  --color-primary-dk:  #8A73B8;
+
+  --color-accent:      #F7BAD1;
+  --color-accent-bg:   #FDE7EF;
+  --color-accent-dk:   #E08FB0;
+
+  --color-mint:        #B8E0D2;
+  --color-mint-bg:     #E4F4EE;
+
+  --color-cream:       #FFF7E8;
+
+  --color-bg:          #FFFCF8;
+  --color-bg-soft:     #FAF5FB;
+  --color-card:        #FFFFFF;
+  --color-text:        #4A3C5E;
+  --color-text-soft:   #8A7AA8;
+  --color-text-mute:   #B0A3C4;
+  --color-border:      #EFE8F5;
+
+  /* 阴影 · 带紫色调 */
+  --shadow-sm:    0 2px 10px rgba(184, 166, 217, 0.12);
+  --shadow-md:    0 4px 20px rgba(184, 166, 217, 0.18);
+  --shadow-lg:    0 8px 32px rgba(184, 166, 217, 0.22);
+  --shadow-glow:  0 0 24px rgba(247, 186, 209, 0.45);
+
+  /* 圆角 · 大圆角更温柔 */
+  --radius-sm:    10px;
+  --radius-md:    16px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+  --radius-tag:   9999px;
+
+  /* 字体 */
+  --font-sans:    'Quicksand', 'LXGW WenKai Screen', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  --font-hand:    'LXGW WenKai Screen', 'Quicksand', 'Noto Sans SC', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+
+  /* 尺寸 */
+  --nav-height:   68px;
+  --max-width:    1120px;
+  --content-pad:  1.25rem;
+
+  /* 过渡 */
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+  --transition:   all 0.3s var(--ease);
+}
+
+/* 深色模式 · 晚安月光夜 */
+body.dark-mode {
+  --color-primary:     #C9B6E4;
+  --color-primary-bg:  #3A3252;
+  --color-primary-dk:  #E6DAF5;
+
+  --color-accent:      #F7BAD1;
+  --color-accent-bg:   #4A2F3E;
+  --color-accent-dk:   #FFCFE0;
+
+  --color-mint:        #9FD4C2;
+  --color-mint-bg:     #2E4339;
+
+  --color-cream:       #3A3045;
+
+  --color-bg:          #1F1A2E;
+  --color-bg-soft:     #241E33;
+  --color-card:        #2D2640;
+  --color-text:        #F0E8FA;
+  --color-text-soft:   #B5A9CC;
+  --color-text-mute:   #8A7DA3;
+  --color-border:      #3A3252;
+
+  --shadow-sm:    0 2px 10px rgba(0, 0, 0, 0.25);
+  --shadow-md:    0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg:    0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow:  0 0 24px rgba(247, 186, 209, 0.35);
+}

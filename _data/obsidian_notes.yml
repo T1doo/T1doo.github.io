@@ -1,7 +1,0 @@
-# Obsidian 导出的 HTML 笔记列表
-# 每次从 Obsidian 导出 HTML 到 notes-html/ 后，在此添加条目
-# - title: 笔记标题
-#   file: 文件名.html
-#   category: 分类
-#   tags: [标签]
-#   date: 日期

@@ -1,60 +1,124 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T1doo 的小世界 🌸</title>
+  <meta name="description" content="T1doo 的个人主页 · 复旦计科 · 计算机视觉 / 具身智能">
 
-<div class="container">
-  <!-- Hero -->
-  <section class="hero fade-in">
-    <div class="hero__avatar">&#x1F9D1;&#x200D;&#x1F4BB;</div>
-    <h1 class="hero__name">T1doo</h1>
-    <p class="hero__bio">学生 / 研究者 / 终身学习者</p>
-    <div class="hero__tags">
-      <span class="tag">在读学生</span>
-      <span class="tag tag--mint">计算机科学</span>
-      <span class="tag tag--blue">技术爱好者</span>
-    </div>
-  </section>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 
-  <hr class="divider">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet">
 
-  <!-- Quick Links -->
-  <section class="section fade-in">
-    <h2 class="section__title">&#x1F680; 快捷入口</h2>
-    <div class="grid grid--3">
-      <a href="{{ '/projects' | relative_url }}" class="card card--link">
-        <span class="card__icon">&#x1F4BB;</span>
-        <h3 class="card__title">项目</h3>
-        <p class="card__desc">查看我的项目作品</p>
-      </a>
-      <a href="{{ '/notes' | relative_url }}" class="card card--link">
-        <span class="card__icon">&#x1F4D3;</span>
-        <h3 class="card__title">笔记</h3>
-        <p class="card__desc">学习笔记与知识整理</p>
-      </a>
-      <a href="{{ '/about' | relative_url }}" class="card card--link">
-        <span class="card__icon">&#x1F44B;</span>
-        <h3 class="card__title">关于我</h3>
-        <p class="card__desc">了解更多关于我的信息</p>
-      </a>
-    </div>
-  </section>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
 
-  <!-- Recent Timeline -->
-  <section class="section fade-in">
-    <h2 class="section__title">&#x1F4AC; 最近动态</h2>
-    <div class="timeline">
-      {% for item in site.data.timeline limit:3 %}
-      <div class="timeline__item">
-        <div class="timeline__date">{{ item.date }}</div>
-        <div class="timeline__title">
-          <span class="timeline__icon">{{ item.icon }}</span>{{ item.title }}
-        </div>
-        <div class="timeline__desc">{{ item.description }}</div>
+  <!-- 顶部导航 -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">🌸 T1doo</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">首页</a></li>
+        <li><a href="about.html" class="nav__link">关于</a></li>
+        <li><a href="projects.html" class="nav__link">项目</a></li>
+        <li><a href="notes.html" class="nav__link">笔记</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__toggle" aria-label="切换主题">🌙</button>
+        <button class="nav__hamburger" aria-label="菜单" aria-expanded="false">☰</button>
       </div>
-      {% endfor %}
     </div>
-    <p style="text-align: center; margin-top: 1rem;">
-      <a href="{{ '/timeline' | relative_url }}" style="font-weight: 600;">查看全部动态 &rarr;</a>
-    </p>
-  </section>
-</div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero fade-in">
+      <div class="hero__avatar" aria-hidden="true">🧚‍♀️</div>
+      <h1 class="hero__name">T1doo</h1>
+      <p class="hero__typing" aria-live="polite">
+        <span class="hero__typing-text"></span><span class="hero__cursor" aria-hidden="true"></span>
+      </p>
+      <div class="hero__tags">
+        <span class="tag">🎓 复旦计科 2024</span>
+        <span class="tag tag--pink">🌙 ISFP</span>
+        <span class="tag tag--mint">🔬 CV / 具身智能</span>
+      </div>
+    </section>
+
+    <!-- 快捷入口 -->
+    <section class="section fade-in">
+      <h2 class="section__title">🌷 小世界入口</h2>
+      <div class="grid grid--3">
+        <a href="about.html" class="card card--link">
+          <span class="card__icon" aria-hidden="true">👋</span>
+          <h3 class="card__title">关于我</h3>
+          <p class="card__desc">了解这个爱听周深的 ISFP 小女孩</p>
+        </a>
+        <a href="projects.html" class="card card--link">
+          <span class="card__icon" aria-hidden="true">💻</span>
+          <h3 class="card__title">项目作品</h3>
+          <p class="card__desc">代码 · 科研 demo · 小小尝试</p>
+        </a>
+        <a href="notes.html" class="card card--link">
+          <span class="card__icon" aria-hidden="true">📚</span>
+          <h3 class="card__title">学习笔记</h3>
+          <p class="card__desc">课程 · 科研 · 工具 · 语言</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 最近高光 -->
+    <section class="section fade-in">
+      <h2 class="section__title">✨ 最近在做</h2>
+      <div class="timeline">
+        <div class="timeline__item">
+          <div class="timeline__date">2026 · 春</div>
+          <div class="timeline__title">精读 ALOHA / ACT 双臂操作论文</div>
+          <div class="timeline__desc">跟着博士学哥入门具身智能，边读边整理笔记 🤖</div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__date">本学期</div>
+          <div class="timeline__title">计算机视觉 · 算法设计 · 计组</div>
+          <div class="timeline__desc">课程 + 作业 + 每周一点点进步 📖</div>
+        </div>
+        <div class="timeline__item">
+          <div class="timeline__date">长期进行中</div>
+          <div class="timeline__title">Obsidian 里种一片小花园</div>
+          <div class="timeline__desc">200+ 条笔记，算法、工具、英语、日常都在这里 🌱</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__socials">
+        <a href="https://github.com/T1doo" target="_blank" rel="noopener" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.1.82-.26.82-.58 0-.28-.01-1.23-.02-2.23-3.01.55-3.8-.73-4.03-1.41-.14-.35-.73-1.41-1.23-1.7-.42-.22-1.02-.78-.02-.8.94-.01 1.62.87 1.85 1.23 1.08 1.82 2.81 1.3 3.5.99.1-.78.42-1.3.77-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.3.46-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.56 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.69.82.57A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:Tido_outloook@outlook.com" title="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+      <p>© <span data-year>2026</span> T1doo · 在樱花里慢慢长大 🌸</p>
+      <p class="footer__quote">"相信热爱可抵岁月漫长"</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/typing.js"></script>
+  <script src="assets/js/petals.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

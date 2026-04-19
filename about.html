@@ -1,63 +1,221 @@
----
-layout: default
-title: 关于我
-description: 了解更多关于我的信息
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 · T1doo 🌸</title>
+  <meta name="description" content="T1doo 的自我介绍 · ISFP · 计算机视觉 / 具身智能方向">
 
-<div class="container">
-  <div class="page-header fade-in">
-    <h1>&#x1F44B; 关于我</h1>
-  </div>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css" rel="stylesheet">
 
-  <!-- Intro -->
-  <section class="section fade-in">
-    <div class="about-intro">
-      <div class="about-intro__avatar">&#x1F9D1;&#x200D;&#x1F393;</div>
-      <div class="about-intro__text">
-        <h2>你好，我是 T1doo</h2>
-        <p>
-          一名在读学生，对计算机科学充满热情。喜欢探索新技术、记录学习过程、构建有趣的项目。
-          这里是我的个人空间，用来分享项目、整理笔记、记录成长轨迹。
-        </p>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">🌸 T1doo</a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">首页</a></li>
+        <li><a href="about.html" class="nav__link">关于</a></li>
+        <li><a href="projects.html" class="nav__link">项目</a></li>
+        <li><a href="notes.html" class="nav__link">笔记</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__toggle" aria-label="切换主题">🌙</button>
+        <button class="nav__hamburger" aria-label="菜单" aria-expanded="false">☰</button>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <hr class="divider">
+  <main class="container">
 
-  <!-- Skills -->
-  <section class="section fade-in">
-    <h2 class="section__title">&#x1F6E0;&#xFE0F; 技能</h2>
-    <div class="skill-cloud">
-      <span class="skill tag">Python</span>
-      <span class="skill tag tag--mint">Java</span>
-      <span class="skill tag tag--blue">JavaScript</span>
-      <span class="skill tag">HTML/CSS</span>
-      <span class="skill tag tag--mint">Git</span>
-      <span class="skill tag tag--blue">Linux</span>
-      <span class="skill tag">Markdown</span>
-      <span class="skill tag tag--mint">LaTeX</span>
+    <div class="page-header fade-in">
+      <h1>👋 关于我</h1>
+      <p>一个在计算机里种花的小女孩</p>
     </div>
-  </section>
 
-  <hr class="divider">
+    <!-- 自我介绍 -->
+    <section class="section fade-in">
+      <div class="about-intro">
+        <div class="about-intro__avatar" aria-hidden="true">🧚‍♀️</div>
+        <div class="about-intro__text">
+          <h2>你好呀，我是 T1doo 🌸</h2>
+          <p>
+            一个复旦大学 2024 级的计算机科学与技术在读本科生，
+            ISFP 小女孩，感性又细腻，喜欢把学到的东西整理成温柔的笔记 📖
+          </p>
+          <p>
+            正在一点点走近 <strong>计算机视觉</strong> 和 <strong>具身智能</strong> 的世界，
+            目标是保研，当然也要留出时间听周深的歌 🎵、偶尔打打 CS2 🎮 呀～
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section class="section fade-in">
-    <h2 class="section__title">&#x1F4EC; 联系方式</h2>
-    <div class="contact-list">
-      <a href="https://github.com/T1doo" target="_blank" class="contact-list__item">
-        <span class="icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        </span>
-        GitHub
-      </a>
-      <a href="mailto:your-email@example.com" class="contact-list__item">
-        <span class="icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </span>
-        Email
-      </a>
+    <hr class="divider">
+
+    <!-- 基本信息 -->
+    <section class="section fade-in">
+      <h2 class="section__title">🌷 基本信息</h2>
+      <div class="grid grid--4">
+        <div class="info-card">
+          <div class="info-card__icon">🏫</div>
+          <div>
+            <div class="info-card__label">学校</div>
+            <div class="info-card__value">复旦大学</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">💻</div>
+          <div>
+            <div class="info-card__label">专业</div>
+            <div class="info-card__value">计算机科学与技术</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">🌙</div>
+          <div>
+            <div class="info-card__label">MBTI</div>
+            <div class="info-card__value">ISFP · 小画家</div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__icon">🔬</div>
+          <div>
+            <div class="info-card__label">科研方向</div>
+            <div class="info-card__value">CV / 具身智能</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 技能 -->
+    <section class="section fade-in">
+      <h2 class="section__title">🛠️ 正在学习的技能</h2>
+      <div class="skill-cloud">
+        <span class="tag">Python</span>
+        <span class="tag tag--pink">C / C++</span>
+        <span class="tag tag--mint">算法设计</span>
+        <span class="tag">计算机视觉</span>
+        <span class="tag tag--cream">PyTorch</span>
+        <span class="tag tag--pink">LaTeX</span>
+        <span class="tag tag--mint">Obsidian</span>
+        <span class="tag">Git</span>
+        <span class="tag tag--pink">Markdown</span>
+        <span class="tag tag--mint">Linux</span>
+        <span class="tag tag--cream">SQL</span>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 爱好 -->
+    <section class="section fade-in">
+      <h2 class="section__title">💕 小小的快乐</h2>
+      <div class="grid grid--4">
+        <div class="hobby-card">
+          <span class="hobby-card__icon">🎵</span>
+          <div class="hobby-card__title">听周深</div>
+          <div class="hobby-card__desc">哥哥的声音治愈一切</div>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-card__icon">🎬</span>
+          <div class="hobby-card__title">追剧</div>
+          <div class="hobby-card__desc">刘浩存 · 孙千 姐姐们</div>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-card__icon">🎮</span>
+          <div class="hobby-card__title">CS2</div>
+          <div class="hobby-card__desc">学习完了再打会儿～</div>
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-card__icon">📚</span>
+          <div class="hobby-card__title">记笔记</div>
+          <div class="hobby-card__desc">Obsidian 里的小花园</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Now 板块 -->
+    <section class="section fade-in">
+      <h2 class="section__title">🌱 正在专注</h2>
+      <div class="grid grid--2">
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">🔬</span>
+          <h3 class="card__title">科研入门</h3>
+          <p class="card__desc">
+            跟着博士学哥一起精读 ALOHA / ACT 论文，学习双臂操作任务中
+            的动作分块与 VAE 建模方法。
+          </p>
+          <div class="card__tags">
+            <span class="tag tag--mint">具身智能</span>
+            <span class="tag">Robotics</span>
+          </div>
+        </div>
+        <div class="card">
+          <span class="card__icon" aria-hidden="true">📖</span>
+          <h3 class="card__title">本学期课程</h3>
+          <p class="card__desc">
+            算法设计 · 计算机视觉 · 计算机组成 · 数据库 · 离散数学 —
+            每一门都好好啃，想保研呀 💪
+          </p>
+          <div class="card__tags">
+            <span class="tag tag--pink">核心课</span>
+            <span class="tag tag--cream">保研冲冲冲</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 联系 -->
+    <section class="section fade-in">
+      <h2 class="section__title">📬 来找我玩呀</h2>
+      <div class="contact-list">
+        <a href="https://github.com/T1doo" target="_blank" rel="noopener" class="contact-list__item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.1.82-.26.82-.58 0-.28-.01-1.23-.02-2.23-3.01.55-3.8-.73-4.03-1.41-.14-.35-.73-1.41-1.23-1.7-.42-.22-1.02-.78-.02-.8.94-.01 1.62.87 1.85 1.23 1.08 1.82 2.81 1.3 3.5.99.1-.78.42-1.3.77-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.3.46-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.56 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.69.82.57A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:Tido_outloook@outlook.com" class="contact-list__item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Email
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__socials">
+        <a href="https://github.com/T1doo" target="_blank" rel="noopener" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.44 9.8 8.21 11.39.6.1.82-.26.82-.58 0-.28-.01-1.23-.02-2.23-3.01.55-3.8-.73-4.03-1.41-.14-.35-.73-1.41-1.23-1.7-.42-.22-1.02-.78-.02-.8.94-.01 1.62.87 1.85 1.23 1.08 1.82 2.81 1.3 3.5.99.1-.78.42-1.3.77-1.6-2.67-.3-5.47-1.34-5.47-5.94 0-1.3.46-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.56 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.93.43.37.81 1.1.81 2.22 0 1.6-.01 2.9-.01 3.29 0 .32.22.69.82.57A12 12 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="mailto:Tido_outloook@outlook.com" title="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+      <p>© <span data-year>2026</span> T1doo · 在樱花里慢慢长大 🌸</p>
+      <p class="footer__quote">"相信热爱可抵岁月漫长"</p>
     </div>
-  </section>
-</div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/petals.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
